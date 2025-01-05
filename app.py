@@ -19,5 +19,12 @@ if hist_button: # al hacer clic en el botón
     st.plotly_chart(fig, use_container_width=True)
 
 car_data = pd.read_csv('vehicles_us.csv') 
-fig = px.scatter(car_data, x="odometer", y="price") 
+hist_button = st.button('Scatter Plot')
+
+if hist_button: # al hacer clic en el botón
+    # escribir un mensaje
+    st.write('Creación de scatter plot para el conjunto de datos de anuncios de venta de coches')
+
+fig = px.scatter(car_data, x="odometer", y="price")
+st.plotly_chart(fig, use_container_width=True) 
 fig.show() 

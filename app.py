@@ -24,6 +24,6 @@ if hist_button: # al hacer clic en el botón
     # escribir un mensaje
     st.write('Creación de scatter plot para el conjunto de datos de anuncios de venta de coches')
     fig = px.scatter(car_data, x="odometer", y="price")
-    fig.show() 
+    st.plotly_chart(fig, use_container_width=True)
 
 

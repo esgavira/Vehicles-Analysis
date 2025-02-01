@@ -26,4 +26,5 @@ if hist_button: # al hacer clic en el botón
     fig = px.scatter(car_data, x="odometer", y="price")
     st.plotly_chart(fig, use_container_width=True)
 
+#
 
